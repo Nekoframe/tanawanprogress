@@ -1,0 +1,19 @@
+contentColumnType: 'decimal(12,2)'
+fieldGroup: cf6920b5-27e7-42ed-ab65-62b87bb19ed1
+handle: version
+instructions: ''
+name: Version
+searchable: false
+settings:
+  decimals: '2'
+  defaultValue: null
+  max: null
+  min: '0.01'
+  prefix: ''
+  previewCurrency: ''
+  previewFormat: decimal
+  size: null
+  suffix: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number
