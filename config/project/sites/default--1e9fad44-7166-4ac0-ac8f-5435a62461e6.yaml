@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: Tanawanprogress
+primary: true
+siteGroup: dcfe7a6c-b17d-4e54-9544-215371c43049
+sortOrder: 1
