@@ -24,13 +24,19 @@
 	{% endif %}
 
 
-	{% if entry.images.one() is defined and entry.images.one() != "" %}
-		{% set image = entry.images.one().getUrl('') %}
-	{% elseif entry.banner.one() is defined and entry.banner.one() != "" %}
-		{% set image = entry.banner.one().getUrl('') %}
+
+	{% if element.socialShareImage is defined and element.socialShareImage|length > 0 %}
+		{% set image = element.socialShareImage.one.getUrl('') %}
+	{% elseif element.bannerImage is defined and element.bannerImage|length > 0 %}
+		{% set image = element.bannerImage.one.getUrl('') %}
 	{% else %}
-		{% set image = globals.defaultImage.one().getUrl('') %}
+		{% if globals.defaultImage is defined and globals.defaultImage|length > 0 %}
+			{% set image = globals.defaultImage.one.getUrl('') %}
+		{% else %}
+			{% set image = '' %}
+		{% endif %}
 	{% endif %}
+{% endif %}
 
 	{# HTML Meta Tags #}
 	<title>{{ meta_title }}</title>
@@ -57,7 +63,8 @@
 	<meta name="twitter:description" content="{{ meta_description }}" />
 	<meta name="twitter:image" content="{{ image }}" />
 
-{% elseif meta_title is defined and meta_title != "" %}
+
+{% if meta_title is defined and meta_title != "" %}
 	{# HTML Meta Tags #}
 	<title>{{ meta_title }}</title>
 {% endif %}
@@ -81,4 +88,3 @@
 <link rel="mask-icon" href="{{ siteUrl }}images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
 <meta name="msapplication-TileColor" content="#2b5797" />
 <meta name="theme-color" content="#ffffff" /> #}
-

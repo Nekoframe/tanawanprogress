@@ -1,8 +1,13 @@
-dateModified: 1603572308
+dateModified: 1603666116
 email:
   fromEmail: frame.thanawan@gmail.com
   fromName: Tanawanprogress
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

@@ -3,6 +3,9 @@
 {% include "bricks/header-doc" %}
 
 <body>
+    <header>
+        {% include "bricks/header-content" %}
+    </header>
 
 
 	{# Google Tag Manager (noscript) #}
@@ -18,9 +21,11 @@
     </main>
 
     
-    {# {% include "bricks/footer-content" %} #}
+    <footer>
+    {% include "bricks/footer-content" %}
+    </footer>
 
-    {# {% include "bricks/footer-scripts" %} #}
+    {% include "bricks/footer-scripts" %}
 
 </body>
 </html>

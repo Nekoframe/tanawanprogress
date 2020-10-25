@@ -1,5 +1,295 @@
 {% extends "layout" %}
 
 {% block content %}
-	Homepage
+<div class="tp-slider">
+	<div class="fluid_container">
+		<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+		{% if entry.bannerImage is defined and entry.bannerImage|length > 0 %}
+			{% for banner in entry.bannerImage.all() %}
+			<div data-src="{{ banner.getUrl('banner') }}">
+				<div class="camera_caption fadeFromBottom tp-caption">
+				{% if banner.heading is defined and banner.heading != '' %}
+					<h1>{{ banner.heading }}</h1>
+				{% endif %}
+				
+				{% if banner.summary is defined and banner.summary != '' %}
+					{{ banner.summary }}
+				{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		{% endif %}
+		</div>
+		<!-- .fluid_container --> 
+	</div>
+</div>
+
+
+<div id="tp-about-section" class="tp-about-section"><!-- tp-about-section -->
+  <div class="container">
+    <div class="row ab-blks"><!-- ab-blks -->
+      <div class="col-md-4 ab-blk"><!-- ab-blk -->
+        <div class="cut-box"><!-- cut-box --> 
+          <img src="images/icon.png" class="img-responsive" alt="">
+          <h2>Welding Automation</h2>
+          <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore aliqua.</p>
+        </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.ab-blk -->
+      <div class="col-md-4 ab-blk"><!-- ab-blk -->
+        <div class="cut-box"><!-- cut-box --> 
+          <img src="images/icon-1.png" class="img-responsive" alt="">
+          <h2>Orbital Welding</h2>
+          <p>Amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.ab-blk -->
+      <div class="col-md-4 ab-blk"><!-- ab-blk -->
+        <div class="cut-box"><!-- cut-box --> 
+          <img src="images/icon-2.png" class="img-responsive" alt="">
+          <h2>High Speed Belelling</h2>
+          <p>Dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.ab-blk --> 
+    </div>
+    <!-- /.ab-blks -->
+    <div class="row">
+      <div class="col-md-12 tp-hero-unit"><!-- tp-hero-unit -->
+        <h1>Hello &amp; Welcome to Our Welding Company!</h1>
+        <p class="lead">Duis ultricies pharetra magna. Donec accum san malesuada orci. Donec sit amet eros rem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictumpat. <strong>Sociis natoque penatibus et magnis</strong> dise parturient montes, nascetur ridiculus musfusce feugiat males uada odio. Morbi nunc odio.</p>
+        <a href="#" class="btn tp-btn-primary">View Project</a> </div>
+      <!-- /.tp-hero-unit --> 
+    </div>
+  </div>
+</div>
+<!-- /.tp-about-section -->
+
+<div id="tp-service-section" class="tp-service-section tp-section-space"><!-- tp-service-section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 tp-hero-unit"><!-- tp-hero-unit -->
+        <h1>Welding Service We Provide</h1>
+        <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis<br>
+          parturient montes, nascetur ridiculus mus. </p>
+      </div>
+      <!-- /.tp-hero-unit --> 
+    </div>
+    <div id="owl-demo">
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Custom Gates &amp; Fencing</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic1.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Ornamental Iron Works</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic2.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Railings - Interior &amp; Exterior</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Railings - Interior &amp; Exterior</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic1.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Railings - Interior &amp; Exterior</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+      <div class="item">
+        <div class="service-blk col-md-12"><!-- service-blk --> 
+          <img src="images/service-pic2.jpg" class="img-responsive" alt="">
+          <div class="cut-box"><!-- cut-box -->
+            <h2><i class="fa fa-arrow-circle-right"></i> <a href="#">Railings - Interior &amp; Exterior</a></h2>
+            <p>Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient .</p>
+            <a href="#" class="btn tp-btn-primary">View service</a> </div>
+          <!-- /.cut-box --> 
+        </div>
+        <!-- /.service-blk --> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.tp-service-section -->
+
+
+<div id="tp-projects" class="tp-projects tp-section-space"><!-- tp-projects -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 tp-hero-unit"><!-- tp-hero-unit -->
+        <h1>Our Projects</h1>
+        <p>Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem.<br>
+          Duis ultricies pharetra magna. </p>
+      </div>
+      <!-- /.tp-hero-unit --> 
+    </div>
+    <div class="portfolioFilter"> <a href="#" data-filter="*" class="current tp-btn-outline">All Categories</a> <a href="#" data-filter=".category-1" class="tp-btn-outline">category-1</a> <a href="#" data-filter=".category-2" class="tp-btn-outline">category-2</a> <a href="#" data-filter=".category-3" class="tp-btn-outline">category-3</a> <a href="#" data-filter=".category-4" class="tp-btn-outline">category-4</a> </div>
+    <div class="portfolioContainer">
+      <div class="category-4">
+        <div class="tp-pic box"> <img src="images/project-1.jpg" class="img-responsive imagezoom" alt="images">
+          <div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div>
+        </div>
+      </div>
+      <div class="category-1 category-2 ">
+        <div class="tp-pic box"><img src="images/project-2.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-3 ">
+        <div class="tp-pic box"><img src="images/project-3.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-1 ">
+        <div class="tp-pic box"><img src="images/project-4.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-1 category-2 ">
+        <div class="tp-pic box"><img src="images/project-5.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-4 ">
+        <div class="tp-pic box"><img src="images/project-6.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-1 category-2 ">
+        <div class="tp-pic box"><img src="images/project-7.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-3 ">
+        <div class="tp-pic box"><img src="images/project-1.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-1 ">
+        <div class="tp-pic box"><img src="images/project-2.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-1 category-2 ">
+        <div class="tp-pic box"><img src="images/project-3.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-4 ">
+        <div class="tp-pic box"><img src="images/project-4.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+      <div class="category-3 category-2 ">
+        <div class="tp-pic box"><img src="images/project-5.jpg" class="img-responsive imagezoom" alt="images"><div class="caption scale-caption">
+            <h1>Heading Title of Project</h1>
+            <a href="#" class="btn tp-btn-primary">View Details</a> </div></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center"> <a href="#" class="btn tp-btn-primary">Request Quote</a> </div>
+    </div>
+  </div>
+</div>
+<!-- /.tp-projects -->
+
+
+<div id="tp-latest-news" class="tp-latest-news tp-section-space"><!-- tp-latest-news -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 tp-hero-unit">
+        <h1>Latest News from Blog</h1>
+        <p>Fusce suscipit varius mium sociis naent montes nascetur ridiculus mus. </p>
+      </div>
+      <!-- /.tp-hero-unit --> 
+    </div>
+    <div class="row news-blks"><!-- news-blks -->
+      <div class="col-md-4 news-blk"><!-- news-blk --> 
+        <img src="images/news-pic.jpg" class="img-responsive" alt="">
+        <div class="cut-box"><!-- cut-box -->
+          <h2><a href="#">Heading Title News</a></h2>
+          <div class="tp-meta"> <span class="tp-meta-date"><i class="fa fa-calendar"></i> 31 March 2015</span> <span class="tp-meta-comments"><i class="fa fa-comments"></i> 2<a href="#"> Comments</a> </span> </div>
+          <p>Fusce suscipit varius mium sociis natoque penatibus nascetur ridiculus mus. </p>
+          <a href="#" class="btn tp-btn-primary">Read More</a> </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.news-blk -->
+      <div class="col-md-4 news-blk"><!-- news-blk --> 
+        <img src="images/news-pic.jpg" class="img-responsive" alt="">
+        <div class="cut-box"><!-- cut-box -->
+          <h2><a href="#">Heading Title News</a></h2>
+          <div class="tp-meta"> <span class="tp-meta-date"><i class="fa fa-calendar"></i> 31 March 2015</span> <span class="tp-meta-comments"><i class="fa fa-comments"></i> 2<a href="#"> Comments</a> </span> </div>
+          <p>Fusce suscipit varius mium sociis natoque penatibus nascetur ridiculus mus. </p>
+          <a href="#" class="btn tp-btn-primary">Read More</a> </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.news-blk -->
+      <div class="col-md-4 news-blk"><!-- news-blk --> 
+        <img src="images/news-pic.jpg" class="img-responsive" alt="">
+        <div class="cut-box"><!-- cut-box -->
+          <h2><a href="#">Heading Title News</a></h2>
+          <div class="tp-meta"> <span class="tp-meta-date"><i class="fa fa-calendar"></i> 31 March 2015</span> <span class="tp-meta-comments"><i class="fa fa-comments"></i> 2<a href="#"> Comments</a> </span> </div>
+          <p>Fusce suscipit varius mium sociis natoque penatibus nascetur ridiculus mus. </p>
+          <a href="#" class="btn tp-btn-primary">Read More</a> </div>
+        <!-- /.cut-box --> 
+      </div>
+      <!-- /.news-blk --> 
+    </div>
+    <!-- /.news-blks --> 
+  </div>
+</div>
+<!-- /.tp-latest-news -->
+<div id="client-trust-section" class="client-trust-section tp-section-space"> <!-- Client Trust Section Start -->
+  <div class="container ">
+    <div class="client-trust">
+      <div class="row">
+        <div class="col-md-3 col-xs-6 client-logo"> <img src="images/logo1.png" alt="" class="img-responsive"> </div>
+        <div class="col-md-3 col-xs-6 client-logo"> <img src="images/logo2.png" alt="" class="img-responsive"> </div>
+        <div class="col-md-3 col-xs-6 client-logo"> <img src="images/logo1.png" alt="" class="img-responsive"> </div>
+        <div class="col-md-3 col-xs-6 client-logo"> <img src="images/logo2.png" alt="" class="img-responsive"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.Client Trust Section Start -->
 {% endblock %}

@@ -1,0 +1,18 @@
+contentColumnType: string(640)
+fieldGroup: 3cac2f5f-646f-46b9-ae97-a6ab6f7bc8ea
+handle: metaDescription
+instructions: ''
+name: 'Meta Description'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 160
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

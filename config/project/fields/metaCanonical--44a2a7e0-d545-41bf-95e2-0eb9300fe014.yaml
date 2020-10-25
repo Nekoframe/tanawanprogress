@@ -1,0 +1,12 @@
+contentColumnType: string(255)
+fieldGroup: 3cac2f5f-646f-46b9-ae97-a6ab6f7bc8ea
+handle: metaCanonical
+instructions: ''
+name: 'Meta Canonical'
+searchable: false
+settings:
+  maxLength: '255'
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url
