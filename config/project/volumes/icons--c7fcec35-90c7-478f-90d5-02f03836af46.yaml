@@ -1,0 +1,38 @@
+fieldLayouts:
+  4e80af6e-d9e7-4308-b0ca-742607adf55f:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: icons
+hasUrls: true
+name: Icons
+settings:
+  path: images/icons
+sortOrder: 2
+type: craft\volumes\Local
+url: /images/icons

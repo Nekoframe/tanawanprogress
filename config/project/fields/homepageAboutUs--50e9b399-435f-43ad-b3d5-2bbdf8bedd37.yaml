@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: 7b9fd6aa-9ae1-4882-8f05-4c91db7d22b7
+handle: homepageAboutUs
+instructions: ''
+name: 'Homepage About us'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_homepageaboutus}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

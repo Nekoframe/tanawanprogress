@@ -24,48 +24,66 @@
 	</div>
 </div>
 
-
+{% if entry.homepageAboutUs is defined and entry.homepageAboutUs|length > 0 %}
 <div id="tp-about-section" class="tp-about-section"><!-- tp-about-section -->
   <div class="container">
     <div class="row ab-blks"><!-- ab-blks -->
-      <div class="col-md-4 ab-blk"><!-- ab-blk -->
-        <div class="cut-box"><!-- cut-box --> 
+
+		{% for item in entry.homepageAboutUs.all() %}
+		<div class="col-md-4 ab-blk">
+			<div class="cut-box">
+			{% if item.icon is defined and item.icon|length > 0 %}
+			<img src="{{ item.icon.one.getUrl('') }}" class="img-responsive" alt="{{ item.icon.one() }}">
+			{% endif %}
+			{% if item.heading is defined and item.heading != '' %}
+			<h2>{{ item.heading }}</h2>
+			{% endif %}
+			{% if item.description is defined and item.description != '' %}
+			<p>{{ item.description }}</p>
+			{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+
+      {# <div class="col-md-4 ab-blk">
+        <div class="cut-box">
           <img src="images/icon.png" class="img-responsive" alt="">
           <h2>Welding Automation</h2>
           <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore aliqua.</p>
         </div>
-        <!-- /.cut-box --> 
-      </div>
-      <!-- /.ab-blk -->
-      <div class="col-md-4 ab-blk"><!-- ab-blk -->
-        <div class="cut-box"><!-- cut-box --> 
+      </div> #}
+      
+      {# <div class="col-md-4 ab-blk">
+        <div class="cut-box">
           <img src="images/icon-1.png" class="img-responsive" alt="">
           <h2>Orbital Welding</h2>
           <p>Amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <!-- /.cut-box --> 
-      </div>
-      <!-- /.ab-blk -->
-      <div class="col-md-4 ab-blk"><!-- ab-blk -->
-        <div class="cut-box"><!-- cut-box --> 
+      </div> #}
+
+      {# <div class="col-md-4 ab-blk">
+        <div class="cut-box">
           <img src="images/icon-2.png" class="img-responsive" alt="">
           <h2>High Speed Belelling</h2>
           <p>Dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <!-- /.cut-box --> 
-      </div>
-      <!-- /.ab-blk --> 
+      </div> #}
+
     </div>
-    <!-- /.ab-blks -->
+    
     <div class="row">
-      <div class="col-md-12 tp-hero-unit"><!-- tp-hero-unit -->
+      <div class="col-md-12 tp-hero-unit">
         <h1>Hello &amp; Welcome to Our Welding Company!</h1>
         <p class="lead">Duis ultricies pharetra magna. Donec accum san malesuada orci. Donec sit amet eros rem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictumpat. <strong>Sociis natoque penatibus et magnis</strong> dise parturient montes, nascetur ridiculus musfusce feugiat males uada odio. Morbi nunc odio.</p>
-        <a href="#" class="btn tp-btn-primary">View Project</a> </div>
-      <!-- /.tp-hero-unit --> 
+        <a href="#" class="btn tp-btn-primary">View Project</a>
+	  </div>
     </div>
+
   </div>
 </div>
+{% endif %}
+
+
 <!-- /.tp-about-section -->
 
 <div id="tp-service-section" class="tp-service-section tp-section-space"><!-- tp-service-section -->
